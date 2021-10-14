@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTDM173</title>
+	<meta name="Author" content="tb"/>
+	<style>
+        body {
+            background: #eee;
+        }
+        
+        section {
+            margin:2rem auto;
+            width:60%;
+            border: solid;
+            background: #fff;
+        }
+        
+        picture img {
+            display:inline-block;
+            margin:auto;
+            max-width: 100%;
+        }
+        
+        .obj-fit img {
+            display:inline-block;
+            object-fit: cover;
+            object-position: center;
+            width:100%;
+            height: 300px;
+        }
+        
+        .not-fit img {
+            display:inline-block;
+            width:100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>ARTDM-173:Web Design II</h1>
+<h2>Using &lt;picture>, &lt;source>, and object-fit</h2>
+
+<h2>Object-fit with basic &lt;img></h2>
+<section>
+   <h3>object-fit:cover;<br> object-position:center;</h3>
+    <div class="obj-fit">
+        <img src="https://unsplash.it/850" alt="demo">
+    </div>
+</section>
+
+<section>
+    <h3>srcset used to swap image based on size</h3>
+     <div class="res-swap">
+         <img src="https://unsplash.it/850" alt="demo">
+     </div>
+ </section>
+
+
+
+
+<section class="obj-fit">
+   <h3>&lt;picture> and &lt;source> with object-fit</h3>
+    <picture>
+      <source media="(min-width: 650px)" srcset="https://unsplash.it/650">
+      <source media="(min-width: 460px)" srcset="https://unsplash.it/460">
+      <img src="https://unsplash.it/250" alt="small">
+    </picture>
+</section>
+
+
+
+
+</body>
+</html>
