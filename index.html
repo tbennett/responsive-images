@@ -47,15 +47,16 @@
 <section>
    <h3>object-fit:cover;<br> object-position:center;</h3>
     <div class="obj-fit">
-        <img src="https://unsplash.it/850" alt="demo">
+        <img src="i/850.jpg" alt="demo">
     </div>
 </section>
 
 <section>
     <h3>srcset used to swap image based on size</h3>
-     <div class="res-swap">
-         <img src="https://unsplash.it/850" alt="demo">
-     </div>
+     <figure class="res-swap">
+         <img srcset="i/canyon-sm.jpg 320w, i/canyon-med.jpg 640w, canyon-lg.jpg 1024w" src="i/canyon-sm.jpg" alt="demo">
+         <figcaption>Photo by Paul IJsendoorn from Pexels</figcaption>
+     </figure>
  </section>
 
 
